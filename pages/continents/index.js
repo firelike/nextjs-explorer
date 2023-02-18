@@ -16,7 +16,7 @@ const Continents = ({data}) => {
                 <thead>
                 <tr>
                     <th>Continent name</th>
-                    <th>Country code</th>
+                    <th>Continent code</th>
                 </tr>
                 </thead>
                 <tbody>
