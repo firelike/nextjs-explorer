@@ -12,15 +12,22 @@ const Countries = ({data}) => {
         <div className={'px-4 py-5 flex flex-col'}>
             <Link href={'/'}><h1>Home</h1></Link>
 
-            <ul>
+            <table>
+                <thead>
+                <tr><th>Country Name</th></tr>
+                </thead>
+                <tbody>
                 {data.map((country) => (
-                    <li key={country.code}>
-                        <Link href={`/countries/${encodeURIComponent(country.code)}`}>
+                    <tr key={country.code}>
+                        <td>
+                            <Link href={`/countries/${encodeURIComponent(country.code)}`}>
                             {country.name}
                         </Link>
-                    </li>
+                        </td>
+                    </tr>
                 ))}
-            </ul>
+                </tbody>
+            </table>
 
         </div>
     )
