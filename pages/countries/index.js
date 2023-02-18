@@ -1,14 +1,6 @@
 import Link from "next/link";
-import {getAllCountries, getAllCountryCodes} from "@/lib/CountriesService";
+import {getAllCountries} from "@/lib/CountriesService";
 
-
-
-// export async function getStaticPaths () {
-//     const paths = await getAllCountryCodes()
-//     return {paths: paths, fallback: false}
-// }
-//
-//
 export async function getServerSideProps () {
     const countries = await getAllCountries()
     return {props:{data:countries}}
@@ -16,7 +8,6 @@ export async function getServerSideProps () {
 
 const Countries = ({data}) => {
 
-    console.debug("IN THE COMPONENT", data)
     return (
         <div className={'px-4 py-5 flex flex-col'}>
             <Link href={'/'}><h1>Home</h1></Link>

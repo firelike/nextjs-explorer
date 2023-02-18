@@ -1,20 +1,11 @@
 
-import {getAllCountries, getAllCountryCodes} from "@/lib/CountriesService";
-import Link from "next/link";
-
-// export async function getStaticPaths () {
-//     const codes = await getAllCountryCodes()
-//     const paths = codes.map(code => `/countries/${code}`)
-//     return {paths: paths, fallback: false}
-// }
+import {getAllCountries} from "@/lib/CountriesService";
 
 
 export async function getServerSideProps (context) {
     const countries = await getAllCountries()
-
     const country = countries.find(item => item.code === context.params.code)
     return {props:{data:country}}
-
 }
 
 const Country = ({data}) => {
@@ -27,4 +18,4 @@ const Country = ({data}) => {
     )
 }
 
-export  default Country
+export default Country

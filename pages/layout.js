@@ -3,8 +3,6 @@ import './global.css'
 
 
 const  RootLayout = async ({ children }) => {
-
-
   return (
     <html lang="en">
       <body>{children}</body>
