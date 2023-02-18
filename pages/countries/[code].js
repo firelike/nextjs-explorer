@@ -14,10 +14,10 @@ const Country = ({data}) => {
         <div>
             <ul className={'flex'}>
                 <li className={'mt-1 px-12 py-3'}>
-                    <Link href={'/'}><h1>Home</h1></Link>
+                    <Link href={'/'}><h1 className={'text-lg font-bold'}>Home</h1></Link>
                 </li>
                 <li className={'mt-1 px-12 py-3'}>
-                    <Link href={'/countries'}><h1>All Countries</h1></Link>
+                    <Link href={'/countries'}><h1 className={'text-lg font-bold'}>All Countries</h1></Link>
                 </li>
             </ul>
 

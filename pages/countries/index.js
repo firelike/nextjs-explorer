@@ -10,7 +10,7 @@ const Countries = ({data}) => {
 
     return (
         <div className={'px-4 py-5 flex flex-col'}>
-            <Link href={'/'}><h1>Home</h1></Link>
+            <Link href={'/'}><h1 className={'text-lg font-bold'}>Home</h1></Link>
 
             <table>
                 <thead>
