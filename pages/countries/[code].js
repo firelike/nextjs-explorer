@@ -14,6 +14,11 @@ const Country = ({data}) => {
             <p>Country code: {data.code}</p>
             <p>Country Name: {data.name}</p>
             <p>Country Native: {data.native}</p>
+            <p>Country Continent: {data.continent.name}</p>
+            <p>Country Emoji: {data.emoji}</p>
+            <p>Country Languages: {data.languages.map(language => {
+                return (<div>{language.code}</div>)
+            }) }</p>
         </div>
     )
 }
