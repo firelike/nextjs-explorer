@@ -19,11 +19,6 @@ export default function Home() {
             </h1>
             <p className="mt-5 text-center text-lg text-white opacity-90">Explore the world with us...</p>
 
-            <MyButton href="/countries/unitedstates" appendClass="animate-bounceLight">United States</MyButton>
-            <MyButton href="/countries/canada" appendClass="animate-bounceLight">Canada</MyButton>
-            <MyButton href="/countries/brazil" appendClass="animate-bounceLight">Brazil</MyButton>
-
-
             <MyButton href="/countries" appendClass="animate-bounceLight">All Countries</MyButton>
 
         </div>
