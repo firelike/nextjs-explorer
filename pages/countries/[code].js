@@ -12,25 +12,25 @@ export async function getServerSideProps (context) {
 const Country = ({data}) => {
     return (
         <div>
-            <ul>
-                <li>
+            <ul className={'flex'}>
+                <li className={'mt-1 px-12 py-3'}>
                     <Link href={'/'}><h1>Home</h1></Link>
                 </li>
-                <li>
+                <li className={'mt-1 px-12 py-3'}>
                     <Link href={'/countries'}><h1>All Countries</h1></Link>
                 </li>
             </ul>
 
-            <div>
-                <p>Country code: {data.code}</p>
-                <p>Country Name: {data.name}</p>
-                <p>Country Native: {data.native}</p>
-                <p>Country Continent: {data.continent.name}</p>
-                <p>Country Emoji: {data.emoji}</p>
-                <p>Country Languages: {data.languages.map(language => {
+            <ul className={'h-56 grid grid-cols-3 gap-4 content-start'}>
+                <li>Country code: {data.code}</li>
+                <li>Country Name: {data.name}</li>
+                <li>Country Native: {data.native}</li>
+                <li>Country Continent: {data.continent.name}</li>
+                <li>Country Emoji: {data.emoji}</li>
+                <li>Country Languages: {data.languages.map(language => {
                     return (<div key={language.code}>{language.code}</div>)
-                }) }</p>
-            </div>
+                }) }</li>
+            </ul>
 
         </div>
     )
