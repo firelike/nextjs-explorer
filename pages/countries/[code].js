@@ -17,7 +17,7 @@ const Country = ({data}) => {
             <p>Country Continent: {data.continent.name}</p>
             <p>Country Emoji: {data.emoji}</p>
             <p>Country Languages: {data.languages.map(language => {
-                return (<div>{language.code}</div>)
+                return (<div key={language.code}>{language.code}</div>)
             }) }</p>
         </div>
     )
