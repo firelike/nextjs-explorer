@@ -14,7 +14,11 @@ const Countries = ({data}) => {
 
             <table>
                 <thead>
-                <tr><th>Country Name</th></tr>
+                <tr>
+                    <th>Country name</th>
+                    <th>Country code</th>
+                    <th>Country name in native language</th>
+                </tr>
                 </thead>
                 <tbody>
                 {data.map((country) => (
@@ -23,6 +27,12 @@ const Countries = ({data}) => {
                             <Link href={`/countries/${encodeURIComponent(country.code)}`}>
                             {country.name}
                         </Link>
+                        </td>
+                        <td>
+                                {country.code}
+                        </td>
+                        <td>
+                            {country.native}
                         </td>
                     </tr>
                 ))}
