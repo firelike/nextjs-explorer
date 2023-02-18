@@ -20,14 +20,14 @@ const Countries = async ({data}) => {
 
     console.debug(countriesCollection)
     return (
-        <>
+        <div className={'px-4 py-5 flex flex-col'}>
             <Link href={'/'}><h1>Home</h1></Link>
         <nav>
             <ul>
                 {countriesCollection.countries.map(item => <li><Link href={`/countries/${item.code}`}>{item.name}</Link></li>)}
             </ul>
            </nav>
-        </>
+        </div>
     )
 
 
